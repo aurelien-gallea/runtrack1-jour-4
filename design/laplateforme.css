@@ -333,6 +333,7 @@ footer a:hover {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
   margin-bottom: 3rem;
+  
 }
 .flex-choice h3, .flex-choice h4 {
   text-align: left;
@@ -429,17 +430,15 @@ footer a:hover {
   background-color: var(--var-bg-light);
   color: var(--var-bg-dark);
   padding: 2em;
-}
- #flex-form {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  flex-direction: column;
+}
+#flex-form {
+  margin: auto;
  }
  
 input, option, select, textarea {
-  max-width: 90%;
-  width: 300px;
+  width: 500px;
  }
 .block {
   width: 100%;
@@ -449,9 +448,31 @@ form input, select, textarea  {
   font-size: 1.2em;
   border:1px solid silver;
   padding: 0.5em;
+  margin: 0 0 1rem ;
 }
 textarea {
   max-width: 600px;
+  resize: none;
+}
+#stop,
+#confirm {
+  padding: 0.5rem;
+  font-size: 1.5em;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  
+}
+#stop {
+  border: 1px silver solid;
+  background-color: var(--var-bg-light);
+  margin: 0 1rem 0 0 ;
+  
+
+}
+#confirm {
+  border: 0;
+  background-color: var(--var-bg-dark);
+  color: var(--var-bg-light);
 }
 /* media queries---------------------------------------------------------- */
 @media all and (max-width: 1000px) {
@@ -460,6 +481,10 @@ textarea {
   }
   #video-accueil {
     flex-wrap: wrap;
+  }
+  input, option, select, textarea {
+    width: 300px;
+    
   }
 }
 
@@ -471,7 +496,9 @@ textarea {
   .flex-div p {
     width: 90%;
   }
-  .h1-coding-school,
+  .h1-coding-school {
+    font-size: 1.5em;
+  }
   .h2-coding-school {
     font-size: 1em;
   }
@@ -494,17 +521,24 @@ textarea {
   #container-form {
     max-width: 90%;
   }
-  textarea, input, select {
-    max-width: 280px ;
-    width: 90%;
-  } 
+  
 }
 @media all and (max-width:400px) {
-  .h1-accueil {
+  .h1-accueil   {
     font-size: 2em;
+  }
+  .h1-coding-school {
+    font-size:1.2em;
+  }
+  .h1-contact {
+    font-size: 1.5em;
   }
   #video-accueil {
     width: 80%;
+  }
+  input, option, select, textarea {
+    width: 100%;
+    /* margin: 0 auto 1rem; */
   }
 }
 @media all and (max-width: 358px) {
